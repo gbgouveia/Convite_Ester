@@ -29,7 +29,7 @@ export class CameraController {
     this.activeTimeline = gsap.timeline();
 
     envelope.open(() => {
-      // Foto 1: Ester Pequena (Z = -8)
+      // 1. Foto: Ester Media (Z = -8)
       this.activeTimeline.to(this.camera.position, {
         z: -8.0,
         duration: 5.0,
@@ -42,7 +42,7 @@ export class CameraController {
         ease: "none",
         onUpdate: () => this.updateWallPosition()
       })
-      // Foto 2: Ester com Violino (Z = -16)
+      // 2. Foto: Ester com Violino (Z = -16)
       .to(this.camera.position, {
         z: -16.0,
         duration: 5.0,
@@ -55,23 +55,10 @@ export class CameraController {
         ease: "none",
         onUpdate: () => this.updateWallPosition()
       })
-      // Foto 3: Ester Média (Z = -24)
+      // 3. Cartão Final de Convite (Nome da Aniversariante) (Z = -26)
       .to(this.camera.position, {
-        z: -24.0,
+        z: -26.0,
         duration: 5.0,
-        ease: "power1.inOut",
-        onUpdate: () => this.updateWallPosition()
-      })
-      .to(this.camera.position, {
-        z: -24.5,
-        duration: 1.5,
-        ease: "none",
-        onUpdate: () => this.updateWallPosition()
-      })
-      // Foto 4: Ester 15 Anos (Z = -32) e Avance para o Cartão Final (Z = -40)
-      .to(this.camera.position, {
-        z: -40.0,
-        duration: 6.0,
         ease: "power2.out",
         onUpdate: () => this.updateWallPosition(),
         onComplete: () => {

@@ -18,34 +18,20 @@ export const EVENT_DATA = {
   surpriseAlert: "🤫 SHHH! É FESTA SURPRESA! Guarde segredo, a Ester não pode saber de nada!"
 };
 
-// Fotos da linha do tempo com legendas baseadas nos nomes das imagens enviadas
+// Fotos da linha do tempo com legendas em ordem elegante
 export const MEMORY_PHOTOS = [
   {
-    year: "2012",
-    title: "Ester Pequena",
-    subtitle: "Primeiros sorrisos e muita fofura",
-    tag: "Ester Pequena",
-    image: "assets/photo_bebe.jpg"
+    year: "1",
+    title: "Momentos Inesquecíveis",
+    subtitle: "Crescendo em graciosidade e encanto",
+    tag: "Ester",
+    image: "assets/ester media.jpg"
   },
   {
-    year: "2016",
+    year: "2",
     title: "Ester com Violino",
     subtitle: "Talento, melodia e paixão pela música",
-    tag: "Ester com Violino",
-    image: "assets/photo_infancia.jpg"
-  },
-  {
-    year: "2021",
-    title: "Ester Média",
-    subtitle: "Crescendo em graciosidade e encanto",
-    tag: "Ester Média",
-    image: "assets/photo_adolescencia.jpg"
-  },
-  {
-    year: "2026",
-    title: "Ester 15 Anos",
-    subtitle: "O sonho inesquecível da debutante",
-    tag: "Ester 15 Anos",
-    image: "assets/photo_15anos.jpg"
+    tag: "Música & Harmonia",
+    image: "assets/ester com violino.jpg"
   }
 ];
