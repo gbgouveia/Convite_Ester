@@ -14,7 +14,7 @@ export class FloralWall {
 
   initMaterials() {
     // 1. Carrega a Textura Fotográfica Hiper-Realista de Paredão Floral
-    const floralTexture = this.textureLoader.load('/assets/floral_wall.jpg');
+    const floralTexture = this.textureLoader.load('assets/floral_wall.jpg');
     floralTexture.colorSpace = THREE.SRGBColorSpace;
     floralTexture.wrapS = THREE.ClampToEdgeWrapping;
     floralTexture.wrapT = THREE.ClampToEdgeWrapping;

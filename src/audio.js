@@ -7,7 +7,7 @@ let isAudioInitialized = false;
 // Inicializa a trilha sonora MP3 em loop contínuo sem interrupções
 export function initAudio() {
   if (!bgAudio) {
-    bgAudio = new Audio('/assets/bg_music.mp3');
+    bgAudio = new Audio('assets/bg_music.mp3');
     bgAudio.loop = true;
     bgAudio.volume = 0.6;
   }

@@ -25,27 +25,27 @@ export const MEMORY_PHOTOS = [
     title: "Ester Pequena",
     subtitle: "Primeiros sorrisos e muita fofura",
     tag: "Ester Pequena",
-    image: "/assets/photo_bebe.jpg"
+    image: "assets/photo_bebe.jpg"
   },
   {
     year: "2016",
     title: "Ester com Violino",
     subtitle: "Talento, melodia e paixão pela música",
     tag: "Ester com Violino",
-    image: "/assets/photo_infancia.jpg"
+    image: "assets/photo_infancia.jpg"
   },
   {
     year: "2021",
     title: "Ester Média",
     subtitle: "Crescendo em graciosidade e encanto",
     tag: "Ester Média",
-    image: "/assets/photo_adolescencia.jpg"
+    image: "assets/photo_adolescencia.jpg"
   },
   {
     year: "2026",
     title: "Ester 15 Anos",
     subtitle: "O sonho inesquecível da debutante",
     tag: "Ester 15 Anos",
-    image: "/assets/photo_15anos.jpg"
+    image: "assets/photo_15anos.jpg"
   }
 ];

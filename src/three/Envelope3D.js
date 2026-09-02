@@ -20,7 +20,7 @@ export class Envelope3D {
   }
 
   initMaterials() {
-    const paperTex = this.textureLoader.load('/assets/navy_paper.jpg');
+    const paperTex = this.textureLoader.load('assets/navy_paper.jpg');
     paperTex.wrapS = THREE.RepeatWrapping;
     paperTex.wrapT = THREE.RepeatWrapping;
     paperTex.repeat.set(2, 2);
