@@ -53,7 +53,11 @@ export class MemoryTunnel {
       // Desenha a foto real centralizada com aspecto mantido
       ctx.save();
       ctx.beginPath();
-      ctx.roundRect(30, 30, 540, 560, 16);
+      if (ctx.roundRect) {
+        ctx.roundRect(30, 30, 540, 560, 16);
+      } else {
+        ctx.rect(30, 30, 540, 560);
+      }
       ctx.clip();
       
       const aspect = img.width / img.height;
@@ -91,7 +95,11 @@ export class MemoryTunnel {
     // Badge do Ano
     ctx.fillStyle = '#1D4ED8';
     ctx.beginPath();
-    ctx.roundRect(200, 580, 200, 44, 22);
+    if (ctx.roundRect) {
+      ctx.roundRect(200, 580, 200, 44, 22);
+    } else {
+      ctx.rect(200, 580, 200, 44);
+    }
     ctx.fill();
     ctx.strokeStyle = '#E8ECEF';
     ctx.lineWidth = 2;
