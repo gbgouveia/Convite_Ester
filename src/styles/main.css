@@ -184,15 +184,14 @@ html, body {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
-/* FASE 3: Cartão Final de Convite (ISOLAMENTO CRÍTICO DE EVENTOS) */
+/* FASE 3: Cartão Final de Convite (SISTEMA DE ROLAGEM SUAVE E RESPONSIVA) */
 #card-final-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 92vw;
-  max-width: 520px;
-  max-height: 88vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
   z-index: 100;
   
   /* REGRAS CRÍTICAS DE ISOLAMENTO INICIAL: INATIVO & OCULTO */
@@ -202,19 +201,43 @@ html, body {
   visibility: hidden !important;
   
   overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y;
+  
+  padding: clamp(16px, 4vh, 32px) 12px clamp(32px, 6vh, 48px) 12px;
+  box-sizing: border-box;
+  
   scrollbar-width: thin;
   scrollbar-color: var(--silver-chrome) transparent;
+}
+
+#card-final-container::-webkit-scrollbar {
+  width: 6px;
+}
+#card-final-container::-webkit-scrollbar-track {
+  background: rgba(7, 13, 30, 0.5);
+}
+#card-final-container::-webkit-scrollbar-thumb {
+  background: var(--silver-chrome);
+  border-radius: 3px;
 }
 
 /* Quando revelado via JS na Fase 3 */
 #card-final-container.active {
   display: flex !important;
   flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
   pointer-events: auto !important;
   visibility: visible !important;
 }
 
 .invitation-card {
+  width: 100%;
+  max-width: 520px;
+  margin: auto;
+  flex-shrink: 0;
   background: linear-gradient(145deg, rgba(11, 19, 43, 0.92) 0%, rgba(7, 13, 30, 0.96) 100%);
   border: 2px solid var(--silver-chrome);
   border-radius: 24px;
