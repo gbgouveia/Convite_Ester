@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Convite 15 Anos - Ester Ferreira Paixão de Sousa</title>
+  <meta name="description" content="Convite 3D Interativo e Cinemático de 15 Anos da Ester Ferreira Paixão de Sousa em Azul & Prata.">
+  <link rel="stylesheet" href="./src/styles/main.css">
+</head>
+<body>
+  <!-- Canvas 3D Three.js -->
+  <canvas id="webgl-canvas"></canvas>
+
+  <!-- Camada de Interface de Usuário (UI) -->
+  <div id="ui-container">
+    
+    <!-- Botão Discreto de Controle de Áudio no Topo -->
+    <div class="audio-toggle-container">
+      <button id="btn-audio-toggle" class="btn-audio" aria-label="Alternar Som">
+        <span id="audio-icon">🎵</span>
+        <span id="audio-label">Som Ligado</span>
+      </button>
+    </div>
+
+    <!-- FASE 1: Overlay Inicial com Botão "Toque para Abrir" -->
+    <div id="hero-overlay">
+      <button id="btn-abrir-envelope" class="btn-abrir">
+        <span>✨ TOQUE PARA ABRIR A EXPERIÊNCIA</span>
+      </button>
+      <div class="hero-subtitle">Ester Ferreira Paixão de Sousa • 15 Anos</div>
+    </div>
+
+    <!-- FASE 2: Indicador Superior da Trajetória 3D -->
+    <div id="timeline-indicator">
+      <div class="timeline-badge">✨ Trajetória de Memórias da Ester ✨</div>
+    </div>
+
+    <!-- FASE 3: CARTÃO FINAL DE CONVITE (ISOLAMENTO RIGOROSO DE EVENTOS - INICIA INATIVO E OCULTO) -->
+    <div id="card-final-container">
+      <div class="invitation-card">
+
+        <!-- Card Alerta Destaque: Festa Surpresa -->
+        <div class="surprise-alert-card">
+          <div class="surprise-alert-text">
+            🤫 SHHH! É FESTA SURPRESA!<br>Guarde segredo, a Ester não pode saber de nada!
+          </div>
+        </div>
+
+        <!-- Cabeçalho -->
+        <div class="card-header-tag">Celebração Inesquecível de 15 Anos</div>
+        <h1 class="card-name" id="event-name">Ester Ferreira Paixão de Sousa</h1>
+        <div class="card-subtitle">Convida você para celebrar este momento especial</div>
+
+        <div class="divider-silver"></div>
+
+        <!-- Informações do Evento -->
+        <div class="event-info-grid">
+          <div class="info-item">
+            <div class="info-icon">📅</div>
+            <div class="info-details">
+              <span class="info-label">Data e Horário</span>
+              <span class="info-value" id="event-date">11 de Setembro de 2026 (Sexta-feira) às 19:15h</span>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon">📍</div>
+            <div class="info-details">
+              <span class="info-label">Local da Festa</span>
+              <span class="info-value" id="event-location">Casa Bari (QNL - Taguatinga Norte)</span>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon">👗</div>
+            <div class="info-details">
+              <span class="info-label">Traje / Dress Code</span>
+              <span class="info-value" id="event-dress">Esporte Fino / Gala (Tons de Azul e Prata)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Painel de Botões de Ação Clicáveis -->
+        <div class="action-buttons-group">
+          <a id="btn-whatsapp" class="btn-action btn-whatsapp" target="_blank" rel="noopener noreferrer">
+            <span>💬 CONFIRMAR PRESENÇA (RSVP)</span>
+          </a>
+
+          <a id="btn-maps" class="btn-action btn-maps" target="_blank" rel="noopener noreferrer">
+            <span>📍 VER LOCALIZAÇÃO NO GOOGLE MAPS</span>
+          </a>
+
+          <button id="btn-replay" class="btn-action btn-replay">
+            <span>✨ Rever Experiência 3D</span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
