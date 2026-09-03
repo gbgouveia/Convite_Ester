@@ -129,11 +129,11 @@ export class MemoryTunnel {
   buildPhotoFrames() {
     const isMobile = window.innerWidth < 768;
 
-    // Distribuímos as fotos ao longo do eixo Z (-8, -16)
-    const zPositions = [-8, -16];
+    // Distribuímos as 4 fotos ao longo do eixo Z (-8, -16, -24, -32)
+    const zPositions = [-8, -16, -24, -32];
     
     // RESPONSIVIDADE MOBILE: X ajustado no mobile para manter perfeitamente no enquadramento
-    const xOffsets = isMobile ? [-0.65, 0.65] : [-2.0, 2.0];
+    const xOffsets = isMobile ? [-0.65, 0.65, -0.6, 0.6] : [-2.2, 2.2, -2.0, 2.0];
     const width = isMobile ? 2.2 : 3.0;
     const height = isMobile ? 3.0 : 4.0;
     const depth = 0.1;

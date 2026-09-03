@@ -18,20 +18,34 @@ export const EVENT_DATA = {
   surpriseAlert: "🤫 SHHH! É FESTA SURPRESA! Guarde segredo, a Ester não pode saber de nada!"
 };
 
-// Fotos da linha do tempo com legendas em ordem elegante
+// Fotos da linha do tempo com todas as fotos na ordem solicitada (Ester Media antes de Ester com Violino)
 export const MEMORY_PHOTOS = [
   {
     year: "1",
+    title: "Primeiros Sorrisos",
+    subtitle: "Primeiros sorrisos e muita fofura",
+    tag: "Infância",
+    image: "assets/ester pequena.jpg"
+  },
+  {
+    year: "2",
     title: "Momentos Inesquecíveis",
     subtitle: "Crescendo em graciosidade e encanto",
     tag: "Ester",
     image: "assets/ester media.jpg"
   },
   {
-    year: "2",
+    year: "3",
     title: "Ester com Violino",
     subtitle: "Talento, melodia e paixão pela música",
     tag: "Música & Harmonia",
     image: "assets/ester com violino.jpg"
+  },
+  {
+    year: "4",
+    title: "15 Anos Inesquecíveis",
+    subtitle: "O sonho radiante da debutante",
+    tag: "15 Anos",
+    image: "assets/ester 15anos.jpg"
   }
 ];
