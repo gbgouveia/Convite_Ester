@@ -7,8 +7,11 @@ let isAudioInitialized = false;
 // Inicializa a trilha sonora MP3 em loop contínuo enquanto o visitante permanecer no site
 export function initAudio() {
   if (!bgAudio) {
-    bgAudio = new Audio('assets/bg_music.mp3');
-    bgAudio.loop = true; // LOOP CONTINUO enquanto a pessoa estiver no site!
+    bgAudio = document.getElementById('bg-music');
+    if (!bgAudio) {
+      bgAudio = new Audio('assets/bg_music.mp3');
+    }
+    bgAudio.loop = true;
     bgAudio.volume = 0.6;
   }
 
