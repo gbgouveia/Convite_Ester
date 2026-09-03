@@ -3,19 +3,13 @@ let audioCtx = null;
 let isMuted = false;
 let bgAudio = null;
 let isAudioInitialized = false;
-let isAudioEnded = false;
 
-// Inicializa a trilha sonora MP3 sem loop (toca até o final natural da faixa de 11MB)
+// Inicializa a trilha sonora MP3 em loop contínuo enquanto o visitante permanecer no site
 export function initAudio() {
   if (!bgAudio) {
     bgAudio = new Audio('assets/bg_music.mp3');
-    bgAudio.loop = false; // SEM LOOP
+    bgAudio.loop = true; // LOOP CONTINUO enquanto a pessoa estiver no site!
     bgAudio.volume = 0.6;
-
-    // Quando a música chegar ao final natural, permanece encerrada e não reinicia
-    bgAudio.addEventListener('ended', () => {
-      isAudioEnded = true;
-    });
   }
 
   if (!audioCtx) {
@@ -46,7 +40,7 @@ export function getIsMuted() {
   return isMuted;
 }
 
-// Inicia a música de fundo se ainda não estiver tocando (NÃO REINICIA se já estiver tocando ou se chegou ao fim!)
+// Inicia a música de fundo se ainda não estiver tocando (NÃO REINICIA se já estiver tocando!)
 export function playEnvelopeOpenSound() {
   initAudio();
 
@@ -54,8 +48,8 @@ export function playEnvelopeOpenSound() {
     audioCtx.resume();
   }
 
-  // Toca a música de fundo APENAS se estiver pausada e ainda não tiver atingido o fim natural
-  if (bgAudio && bgAudio.paused && !isAudioEnded) {
+  // Toca a música de fundo APENAS se estiver pausada (reprodução contínua ininterrupta)
+  if (bgAudio && bgAudio.paused) {
     bgAudio.play().catch(err => {
       console.warn("Autoplay bloqueado pelo navegador, aguardando clique.", err);
     });

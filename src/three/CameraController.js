@@ -29,49 +29,62 @@ export class CameraController {
     this.activeTimeline = gsap.timeline();
 
     envelope.open(() => {
-      // Foto 1: Ester Pequena (Z = -8)
+      // Foto 1: Ester Pequena (Moldura em Z = -10, Câmera para em Z = -5.0 para contemplação perfeita)
       this.activeTimeline.to(this.camera.position, {
-        z: -8.0,
-        duration: 4.5,
+        z: -5.0,
+        duration: 6.0,
         ease: "power1.inOut",
         onUpdate: () => this.updateWallPosition()
       })
       .to(this.camera.position, {
-        z: -8.5,
-        duration: 1.2,
+        z: -5.5,
+        duration: 2.5,
         ease: "none",
         onUpdate: () => this.updateWallPosition()
       })
-      // Foto 2: Ester Media (Z = -16)
+      // Foto 2: Ester Media (Moldura em Z = -18, Câmera para em Z = -13.0)
       .to(this.camera.position, {
-        z: -16.0,
-        duration: 4.5,
+        z: -13.0,
+        duration: 6.0,
         ease: "power1.inOut",
         onUpdate: () => this.updateWallPosition()
       })
       .to(this.camera.position, {
-        z: -16.5,
-        duration: 1.2,
+        z: -13.5,
+        duration: 2.5,
         ease: "none",
         onUpdate: () => this.updateWallPosition()
       })
-      // Foto 3: Ester com Violino (Z = -24)
+      // Foto 3: Ester com Violino (Moldura em Z = -26, Câmera para em Z = -21.0)
       .to(this.camera.position, {
-        z: -24.0,
-        duration: 4.5,
+        z: -21.0,
+        duration: 6.0,
         ease: "power1.inOut",
         onUpdate: () => this.updateWallPosition()
       })
       .to(this.camera.position, {
-        z: -24.5,
-        duration: 1.2,
+        z: -21.5,
+        duration: 2.5,
         ease: "none",
         onUpdate: () => this.updateWallPosition()
       })
-      // Foto 4: Ester 15 Anos (Z = -32) e transição para o Cartão Final (Z = -40)
+      // Foto 4: Ester 15 Anos (Moldura em Z = -34, Câmera para em Z = -29.0)
       .to(this.camera.position, {
-        z: -40.0,
-        duration: 5.5,
+        z: -29.0,
+        duration: 6.0,
+        ease: "power1.inOut",
+        onUpdate: () => this.updateWallPosition()
+      })
+      .to(this.camera.position, {
+        z: -29.5,
+        duration: 2.5,
+        ease: "none",
+        onUpdate: () => this.updateWallPosition()
+      })
+      // Transição Cinemática suave para o Cartão Final de Convite (Z = -42)
+      .to(this.camera.position, {
+        z: -42.0,
+        duration: 7.0,
         ease: "power2.out",
         onUpdate: () => this.updateWallPosition(),
         onComplete: () => {
